@@ -9,7 +9,6 @@ public class Task2 {
         System.out.println("Year of production: " + motorbike.getYearProduction());
         System.out.println("Color: " + motorbike.getColor());
         System.out.println("Model: " + motorbike.getModel());
-
     }
 }
 
