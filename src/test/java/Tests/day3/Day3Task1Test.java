@@ -8,38 +8,40 @@
 //
 //
 //public class Day3Task1Test extends AbstractTest {
+//
 //    @Test
 //    public void Moscow() {
-//        setInput("Москва");
+//        setInput("Москва\nStop\n");
 //        Task1.main(new String[0]);
-//        assertEquals("Россия", getOutput(), "Москва");
+//        assertEquals("Россия" + System.lineSeparator(), getOutput(), "Москва");
 //    }
 //
 //    @Test
 //    public void Milan() {
-//        setInput("Милан");
+//        setInput("Милан\nStop\n");
 //        Task1.main(new String[0]);
-//        assertEquals("Италия", getOutput(), "Милан");
+//        assertEquals("Италия" + System.lineSeparator(), getOutput(), "Милан");
 //    }
 //
 //    @Test
 //    public void London() {
-//        setInput("Лондон");
+//        setInput("Лондон\nStop\n");
 //        Task1.main(new String[0]);
-//        assertEquals("Англия", getOutput(), "Лондон");
+//        assertEquals("Англия" + System.lineSeparator(), getOutput(), "Лондон");
 //    }
 //
 //    @Test
 //    public void Munich() {
-//        setInput("Мюнхен");
+//        setInput("Мюнхен\nStop\n");
 //        Task1.main(new String[0]);
-//        assertEquals("Германия", getOutput(), "Мюнхен");
+//        assertEquals("Германия" + System.lineSeparator(), getOutput(), "Мюнхен");
 //    }
 //
 //    @Test
 //    public void Other() {
-//        setInput("Лиссабон");
+//        setInput("Лиссабон\nStop\n");
 //        Task1.main(new String[0]);
-//        assertEquals("Неизвестная страна", getOutput(), "Лиссабон");
+//        assertEquals("Неизвестная страна" + System.lineSeparator(), getOutput(), "Лиссабон");
 //    }
+//
 //}

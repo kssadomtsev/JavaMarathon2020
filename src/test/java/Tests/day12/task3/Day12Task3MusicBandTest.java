@@ -1,5 +1,6 @@
 //package Tests.day12.task3;
 //
+//import day12.task3.MusicBand;
 //import day12.task3.Task3;
 //import org.junit.jupiter.api.Assertions;
 //import org.junit.jupiter.api.Test;
@@ -24,3 +25,4 @@
 //    }
 //
 //}
+//

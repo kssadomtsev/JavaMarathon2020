@@ -1,5 +1,7 @@
 //package Tests.day13;
 //
+//import day13.MessageDatabase;
+//import day13.User;
 //import org.junit.jupiter.api.Assertions;
 //import org.junit.jupiter.api.Test;
 //
@@ -54,4 +56,5 @@
 //        Assertions.assertEquals(1, MessageDatabase.getMessages().size(),
 //                "Пользователь 1 отправляет сообщение пользователю 2. Количество сообщений в базе данных");
 //    }
+//
 //}

@@ -22,4 +22,5 @@
 //        Task1.printSumDigits(file);
 //        Assertions.assertEquals(-10 + System.lineSeparator(), getOutput(), "Файл содержит: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1");
 //    }
+
 //}

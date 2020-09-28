@@ -2,7 +2,6 @@
 //
 //import Tests.AbstractTest;
 //import day14.Task2;
-//import day14.Task3;
 //import org.junit.jupiter.api.Assertions;
 //import org.junit.jupiter.api.Test;
 //
@@ -21,7 +20,7 @@
 //    @Test
 //    void negativeAge() {
 //        File file = new File("src/test/resources/D14T2_2.txt");
-//        Task3.parseFileToObjList(file);
+//        Task2.parseFileToStringList(file);
 //        Assertions.assertEquals("Некорректный входной файл" + System.lineSeparator(), getOutput(),
 //                "В файле содержится отрицательный возраст");
 //    }
@@ -29,10 +28,9 @@
 //    @Test
 //    void fileNotFound() {
 //        File file = new File("src/test/resources/D14T2_miss.txt");
-//        Task3.parseFileToObjList(file);
+//        Task2.parseFileToStringList(file);
 //        Assertions.assertEquals("Файл не найден" + System.lineSeparator(), getOutput(),
 //                "Попытка обратиться к файлу, которого нет");
 //    }
-//
 //
 //}

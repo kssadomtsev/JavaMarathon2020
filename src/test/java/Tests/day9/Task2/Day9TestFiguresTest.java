@@ -1,7 +1,11 @@
 //package Tests.day9.Task2;
 //
 //import Tests.AbstractTest;
+//import day9.Task2.Circle;
+//import day9.Task2.Figure;
+//import day9.Task2.Rectangle;
 //import day9.Task2.TestFigures;
+//import day9.Task2.Triangle;
 //import org.junit.jupiter.api.BeforeEach;
 //import org.junit.jupiter.api.Test;
 //

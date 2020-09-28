@@ -1,5 +1,7 @@
 //package Tests.day12.task5;
 //
+//import day12.task5.MusicArtist;
+//import day12.task5.MusicBand;
 //import org.junit.jupiter.api.Test;
 //
 //import java.util.ArrayList;
@@ -29,4 +31,6 @@
 //        assertEquals(7, band2.getMembers().size(), "Участники: гр. А = 4, гр. В = 3. После объединения в группе В");
 //
 //    }
+//
 //}
+//
