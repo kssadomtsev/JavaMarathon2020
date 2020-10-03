@@ -15,7 +15,11 @@ public class Picker extends Employee implements Worker {
     @Override
     public void bonus() {
         if (super.warehouse.getCountOrders() % 1500 == 0) {
-            super.salary = 80 * 3 * ((double)super.warehouse.getCountOrders() / 1500);
+            int score = super.warehouse.getCountOrders() / 1500;
+            if (super.gotBonuses < score) {
+                super.salary = super.salary * 3;
+                super.gotBonuses = score;
+            }
         }
     }
 }

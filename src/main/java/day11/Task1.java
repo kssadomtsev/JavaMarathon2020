@@ -10,6 +10,5 @@ public class Task1 {
         System.out.println(w.getBalance());
         courier.bonus();
         System.out.println(courier.getSalary());
-
     }
 }

@@ -15,7 +15,11 @@ public class Courier extends Employee implements Worker {
     @Override
     public void bonus() {
         if (super.warehouse.getBalance() % 1000000 == 0) {
-            super.salary = 100 * 2 * ((double) super.warehouse.getBalance() / 1000000);
+            int score = (int) super.warehouse.getBalance() / 1000000;
+            if (super.gotBonuses < score) {
+                super.salary = super.salary * 2;
+                super.gotBonuses = score;
+            }
         }
     }
 }

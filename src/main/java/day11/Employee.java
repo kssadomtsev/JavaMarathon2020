@@ -1,8 +1,9 @@
 package day11;
 
 public abstract class Employee {
-    double salary;
-    Warehouse warehouse;
+    protected double salary;
+    protected Warehouse warehouse;
+    protected int gotBonuses;
 
     public Employee(Warehouse warehouse) {
         this.warehouse = warehouse;
