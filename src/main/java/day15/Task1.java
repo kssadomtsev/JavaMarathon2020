@@ -12,20 +12,16 @@ public class Task1 {
         File input = new File("src/main/resources/shoes.csv");
         File output = new File("src/main/resources/missing_shoes.txt");
         try {
-            List<String[]> shoes = new ArrayList<>();
             Scanner scanner = new Scanner(input);
+            PrintWriter printWriter = new PrintWriter(output);
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] shoe = line.split(";");
                 if (Integer.parseInt(shoe[2]) == 0) {
-                    shoes.add(shoe);
+                    printWriter.println(String.join(", ", shoe));
                 }
             }
             scanner.close();
-            PrintWriter printWriter = new PrintWriter(output);
-            for (String[] shoe : shoes) {
-                printWriter.println(String.join(", ", shoe));
-            }
             printWriter.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
