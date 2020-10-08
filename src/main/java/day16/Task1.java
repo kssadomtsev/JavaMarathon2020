@@ -15,7 +15,7 @@ public class Task1 {
         try (Scanner scanner = new Scanner(file)) {
             String line = scanner.nextLine();
             String[] numbersString = line.split(" ");
-            double avg = Arrays.stream(numbersString).map(Double::parseDouble).reduce(0.0, Double::sum) / numbersString.length;
+            double avg = Arrays.stream(numbersString).mapToDouble(Double::parseDouble).average().orElse(Double.NaN);
             String avgFormatted = String.format("%.3f", avg);
             System.out.print(avg + " --> " + avgFormatted);
         } catch (FileNotFoundException e) {
