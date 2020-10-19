@@ -9,36 +9,31 @@ import java.util.*;
 
 public class Validator {
 
-    public static Ship validateShipPlace(BattleField battleField, ShipType shipType, String input) {
-        try {
-            // Check that was provided needed number of words separated with ";"
-            String[] expected = input.split(";");
-            if (expected.length != shipType.getSize()) {
-                throw new InputMismatchException();
-            }
-            // Check that all coordinates has valid format
-            for (String str : expected) {
-                if (!validateCoordinate(str)) {
-                    return null;
-                }
-            }
-            // Cast strings to coordinate objects
-            List<Coordinate> coordinates = new ArrayList<>(expected.length);
-            for (String str : expected) {
-                coordinates.add(getCoordinateFromString(str));
-            }
-            // Check that all coordinates are available for place ship
-            for (Coordinate coordinate : coordinates) {
-                if (!isAvailableCoordinate(coordinate, battleField)) {
-                    return null;
-                }
-            }
-            // Check that coordinates can be used to create correct ship form
-            return isCorrectShip(coordinates, shipType);
-        } catch (InputMismatchException inputMismatchException) {
-            System.out.println("Неверное количество агрументов, разделенных \";\". Повторите ввод");
-            return null;
+    public static Ship validateShipPlace(BattleField battleField, ShipType shipType, String input) throws InputMismatchException {
+        // Check that was provided needed number of words separated with ";"
+        String[] expected = input.split(";");
+        if (expected.length != shipType.getSize()) {
+            throw new InputMismatchException();
         }
+        // Check that all coordinates has valid format
+        for (String str : expected) {
+            if (!validateCoordinate(str)) {
+                return null;
+            }
+        }
+        // Cast strings to coordinate objects
+        List<Coordinate> coordinates = new ArrayList<>(expected.length);
+        for (String str : expected) {
+            coordinates.add(getCoordinateFromString(str));
+        }
+        // Check that all coordinates are available for place ship
+        for (Coordinate coordinate : coordinates) {
+            if (!isAvailableCoordinate(coordinate, battleField)) {
+                return null;
+            }
+        }
+        // Check that coordinates can be used to create correct ship form
+        return isCorrectShip(coordinates, shipType);
     }
 
     public static boolean validateCoordinate(String coordinate) {

@@ -1,8 +1,10 @@
 package FinalProject.model;
 
+import FinalProject.exceptions.NonCoordinateException;
 import FinalProject.utils.Validator;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -28,9 +30,14 @@ public class Player {
             String stringBuilder = IntStream.range(1, shipType.getSize()).mapToObj(j -> ";x,y").collect(Collectors.joining("", "x,y", ""));
             System.out.println("Введи координаты " + shipType.getTypeForm2() + " (формат: " + stringBuilder + ")");
             Ship nextShip = null;
-            while (nextShip == null) {
+            while (nextShip == null && scanner.hasNext()) {
                 String input = scanner.nextLine();
-                nextShip = Validator.validateShipPlace(battleField, shipType, input);
+                try {
+                    nextShip = Validator.validateShipPlace(battleField, shipType, input);
+                } catch (InputMismatchException inputMismatchException) {
+                    System.out.println("Неверное количество агрументов, разделенных \";\". Повторите ввод");
+                }
+
             }
             ships.add(nextShip);
             placeShipOnBattleField(nextShip);
@@ -143,5 +150,21 @@ public class Player {
 
     public int getAliveShipCount() {
         return aliveShipCount;
+    }
+
+    public BattleField getBattleField() {
+        return battleField;
+    }
+
+    public void setBattleField(BattleField battleField) {
+        this.battleField = battleField;
+    }
+
+    public List<Ship> getShips() {
+        return ships;
+    }
+
+    public void setShips(List<Ship> ships) {
+        this.ships = ships;
     }
 }

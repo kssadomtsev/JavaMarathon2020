@@ -69,7 +69,7 @@ public class Game {
         return currentPlayer == 0 ? 1 : 0;
     }
 
-    private void initBattleField(Player player) {
+    public void initBattleField(Player player) {
         System.out.println("Начнем расставлять корабли на поле " + player.getName() + ". Другой игрок, не смотри!");
         player.placeShips();
     }
