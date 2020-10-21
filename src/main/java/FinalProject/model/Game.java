@@ -27,7 +27,7 @@ public class Game {
     public void start() {
         // Select who will start game
         Random rand = new Random();
-        int firstAttempt = rand.nextInt() % 2;
+        int firstAttempt = rand.nextInt(2);
         System.out.println("Игру начинает игрок " + players[firstAttempt].getName());
         int currentPlayer = firstAttempt;
         Scanner scanner = new Scanner(System.in);
